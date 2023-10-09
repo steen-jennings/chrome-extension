@@ -1,0 +1,41 @@
+//TODO: UPDATE THIS FOR PRECISION
+{
+  "manifest_version": 3,
+  "name": "BookIt Meeting Scheduler",
+  "version": "1.0",
+  "description": "The best of LeanData's BookIt in a convenient and easy to use Chrome Extension.",
+  "action": {
+  },
+  "host_permissions": ["https://login.salesforce.com/*"],
+  "permissions": [
+    "identity",
+    "webNavigation",
+    "storage",
+    "tabs",
+    "cookies",
+    "activeTab"
+  ],
+  "oauth2": {
+    "client_id": "YOUR_SALESFORCE_CLIENT_ID",
+    "scopes": ["api"]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": [
+          "<all_urls>"
+      ],
+      "js": ["extension-side-panel.js", "embedded-meeting-times-frame.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "loggedIn.html", "*", "http://localhost:4200/chrome-extension/auth"],
+      "matches": ["https://*/*", "http://*/*", "https://www.google.com/*"],
+      "extension_ids": ["gdkdjjmclpglpabkbepbojbmfgkalldi"]
+    }
+  ]
+}

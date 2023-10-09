@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeanData BookIt Invite</title>
+  <!-- Your embedded window CSS styles here -->
+  <style>
+    body {
+      overflow: hidden;
+    }
+    html, body, iframe {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- TODO: this will be replaced with the scheduling page iFrame link, we will need to pass params to it as well. -->
+  <iframe id="myIframe" src="https://bookit-staging-9.herokuapp.com/v2/bookit-invite/embedded-meeting-times"></iframe>
+  <!-- <iframe id="myIframe" src="http://localhost:5000/v2/bookit-invite/embedded-meeting-times"></iframe> -->
+  <!-- <iframe src="https://bookit-staging-3.herokuapp.com/l/mDYHmQb/cody-conway-link"></iframe> -->
+  <script src="embedded-meeting-times-frame.js"></script>
+</body>
+</html>

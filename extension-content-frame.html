@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Embedded Window</title>
+  <!-- Your embedded window CSS styles here -->
+  <style>
+    html, body, iframe {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <!-- <iframe src="https://bookit-staging-10.herokuapp.com/app/chrome-extension/home" scrolling="no"></iframe> -->
+  <!-- <iframe src="https://bookit-staging-9.herokuapp.com/app/chrome-extension/home" scrolling="no"></iframe> -->
+  <iframe src="http://localhost:5000/app/chrome-extension/home" scrolling="no"></iframe>
+  <script src="extension-content-frame.js"></script>
+</body>
+</html>
